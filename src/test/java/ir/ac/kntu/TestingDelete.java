@@ -1,6 +1,7 @@
 package ir.ac.kntu;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -32,7 +33,6 @@ public class TestingDelete {
         }
     }
 
-
     @Test
     public void testCopyDirectories() throws IOException, URISyntaxException {
         File file = new File("src\\test\\java\\ir\\ac\\kntu\\add");
@@ -44,10 +44,12 @@ public class TestingDelete {
     }
 
     private void delete(Path path) throws IOException {
-        Files.walk(path)
-                .sorted(Comparator.reverseOrder())
-                .map(Path::toFile)
-                .forEach(File::delete);
+        if (path.toFile().exists()) {
+            Files.walk(path)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        }
     }
 
     private void copyDirectory(Path srcPath, Path destination) throws IOException {
