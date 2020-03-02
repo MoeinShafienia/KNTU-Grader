@@ -2,7 +2,7 @@
 + An app for grading Maven-based java projects
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/moeinshafienia/KNTU_Grader/master/screenshots/KNTU_Grader.png"></br>
+<img src="https://raw.githubusercontent.com/MoeinShafienia/KNTU-Grader/master/screenshots/KNTU-Grader.png"></br>
 
 ## How to use
 
